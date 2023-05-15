@@ -4,6 +4,13 @@ type Props = {
     }
 }
 
+// 동적으로 바뀌는 metadata
+export function generateMetadata({params}:Props){
+    return{
+        title:`제품의 이름 ${params.slug}`
+    }
+}
+
 function Pants({params}: Props) {
     return (
         <h1>{params.slug}</h1>
